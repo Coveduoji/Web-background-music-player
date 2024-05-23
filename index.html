@@ -28,6 +28,17 @@
         /* 图片旋转动画，2秒完成一次旋转，线性动画，无限循环，初始状态为暂停 */
         animation: rotateAlbum 3s linear infinite; /* 修改这里，将动画设置为默认运行 */
     }
+    #playPauseButton:hover::after {
+    content: "\266B"; /* 音符符号的 Unicode */
+    font-family: Arial, sans-serif; /* 或者你用来显示音符的字体 */
+    font-size: 500%;
+    color: #000000;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
     /* 当按钮处于播放状态时，激活旋转动画 */
     #playPauseButton.playing img {
         animation-play-state: running;
